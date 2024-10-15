@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Real Madrid Search Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+ <div style= "border:7px solid LightSteelBlue; border-radius: 10px; padding:25px; box-shadow: 10px 10px 5px lavender; background-color:" >
+
+    <h1 style="color: teal; display: flex; justify-content: center; align-items: center; font-family: Courier New;">Real Madrid Info System </h1>
+    <form action="/search" method="POST">
+        <input type="text" name="query" id="query" placeholder="Enter your search query..." required style="margin-left:28rem; margin-top:3rem; height:2rem; font-size:1rem  ">
+        <input type="submit" value="Search" style="background:teal; border-radius:1rem; color:white; border:1px solid; height:3rem; font-size:1rem">
+    </form>
+
+</div>
+
+</body>
+</html>

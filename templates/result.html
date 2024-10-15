@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Verdana;
+            margin: 40px;
+           
+        }
+        .result-item {
+
+            
+            margin-bottom: 40px;
+            font-family: Verdana;
+            
+            
+        }
+        a {
+           
+            color: teal;
+            text-decoration: none;
+            margin-top: 20px;
+
+            
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: teal; margin-left:25rem; font-family: Courier New;">Search Results for "{{ query }}"</h1>
+
+    <div class="results" style="border:7px solid LightSteelBlue; border-radius: 10px; padding:25px; background-color:Beige;">
+        {% if results %}
+            <ul>
+                {% for result in results %}
+                    <li class="result-item">
+                        {{ result.document }} 
+                         <br><strong>Similarity:</strong> {{ result.similarity }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No matching documents found.</p>
+        {% endif %}
+    </div>
+
+    <br>
+    <a href="/" >Back to Search</a>
+
+</body>
+</html>
